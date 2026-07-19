@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light">
+  <meta name="color-scheme" content="light dark">
   <title>Jantar de Celebração – Claudia &amp; Oséias</title>
 
   <meta property="og:type" content="website">
@@ -27,7 +27,7 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
     :root {
-      color-scheme: only light;
+      color-scheme: light dark;
       /* fundos como imagem (não são escurecidos pelo modo escuro) */
       --bg-panel: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAE0lEQVR4AWL69f3DfxBmYoACAAAAAP//7TrCWwAAAAZJREFUAwBo4AfFRV3E2gAAAABJRU5ErkJggg==");
       --bg-card:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAE0lEQVR4AWL6/ePjfxBmYoACAAAAAP//POQsxQAAAAZJREFUAwBpNAfLkNkTVAAAAABJRU5ErkJggg==");
@@ -478,17 +478,41 @@
       .card { box-shadow: none; min-height: 100svh; }
     }
 
-    /* Fornece um "tema escuro" que continua CLARO, para o navegador
-       não aplicar o escurecimento automático do modo escuro. */
+    /* ===== Tema ESCURO elegante (para convidados no modo escuro) ===== */
     @media (prefers-color-scheme: dark) {
-      body { background-color: #efe7d7 !important; color: var(--ink) !important; }
-      .content { background: #faf7f0 !important; }
-      .detail, .infobox { background: #fbf8f1 !important; }
-      .rsvp { background: #fdfbf6 !important; }
-      .convite-texto, .convite-extra, .local-nome,
-      .detail .info-value, .rsvp p, .rsvp p strong,
-      .box-value, .children-list .ci { color: var(--ink) !important; }
-      .rsvp p, .rsvp-sub, .convite-extra { color: #4a5a6b !important; }
+      body { background-color: #0e1730 !important; }
+      .content {
+        background: #16213c !important;
+        border-color: rgba(201,164,94,.6) !important;
+        box-shadow: 0 12px 40px rgba(0,0,0,.55) !important;
+      }
+      .content::before { border-color: rgba(201,164,94,.4) !important; }
+
+      /* monograma sobre uma placa creme, para aparecer no escuro */
+      .brand .logo { background: #f4ecdb; border-radius: 18px; padding: 14px 20px; }
+
+      /* títulos e valores em creme */
+      .convite-texto, .local-nome,
+      .detail .info-value, .box-value,
+      .rsvp p strong { color: #f2e9d7 !important; }
+
+      /* textos de apoio em azul claro */
+      .convite-extra, .rsvp p, .rsvp-sub, .aviso,
+      .children-list .ci { color: #b9c7dc !important; }
+
+      /* rótulos, assinatura e detalhes em dourado */
+      .event-tag .label, .info-label, .box-label, .rsvp-label,
+      .map-btn .map-sub, .mbar-title, .footer .f-names,
+      .children-list .ci strong, .diamond .dot { color: #d9b97c !important; }
+      .footer .f-small { color: #9fb0c8 !important; }
+      .criador .cri-nome, .criador .cri-servicos { color: #8493ab !important; }
+      .event-tag .line { background: rgba(217,185,124,.4) !important; }
+
+      /* cartões e caixas em azul-marinho */
+      .detail, .infobox { background: #202d4c !important; border-color: rgba(201,164,94,.32) !important; }
+      .rsvp { background: #22304f !important; border-color: #C9A45E !important; }
+      .map-btn { background: #223154 !important; }
+      .icon-circle { background: #2b3b60 !important; }
     }
   </style>
 </head>
