@@ -105,6 +105,13 @@
       0%, 100% { opacity: .75; }
       50%      { opacity: 1; }
     }
+
+    /* "Tema escuro" que continua claro, para evitar o escurecimento
+       automático do modo escuro do navegador. */
+    @media (prefers-color-scheme: dark) {
+      body { background-color: #e7ddc9 !important; }
+      .cta-hint { color: #2D3E5E !important; }
+    }
   </style>
 </head>
 <body>

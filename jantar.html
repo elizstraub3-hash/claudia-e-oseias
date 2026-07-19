@@ -473,6 +473,19 @@
     @media (max-width: 480px) {
       .card { box-shadow: none; min-height: 100svh; }
     }
+
+    /* Fornece um "tema escuro" que continua CLARO, para o navegador
+       não aplicar o escurecimento automático do modo escuro. */
+    @media (prefers-color-scheme: dark) {
+      body { background-color: #efe7d7 !important; color: var(--ink) !important; }
+      .content { background: #faf7f0 !important; }
+      .detail, .infobox { background: #fbf8f1 !important; }
+      .rsvp { background: #fdfbf6 !important; }
+      .convite-texto, .convite-extra, .local-nome,
+      .detail .info-value, .rsvp p, .rsvp p strong,
+      .box-value, .children-list .ci { color: var(--ink) !important; }
+      .rsvp p, .rsvp-sub, .convite-extra { color: #4a5a6b !important; }
+    }
   </style>
 </head>
 <body>
