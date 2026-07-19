@@ -28,6 +28,10 @@
 
     :root {
       color-scheme: only light;
+      /* fundos como imagem (não são escurecidos pelo modo escuro) */
+      --bg-panel: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAE0lEQVR4AWL69f3DfxBmYoACAAAAAP//7TrCWwAAAAZJREFUAwBo4AfFRV3E2gAAAABJRU5ErkJggg==");
+      --bg-card:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAE0lEQVR4AWL6/ePjfxBmYoACAAAAAP//POQsxQAAAAZJREFUAwBpNAfLkNkTVAAAAABJRU5ErkJggg==");
+      --bg-rsvp:  url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0kAAAAE0lEQVR4AWL6+/vbfxBmYoACAAAAAP//Fo/kLwAAAAZJREFUAwBqRgffz8PU+QAAAABJRU5ErkJggg==");
       --ink: #2D3E5E;        /* azul clássico */
       --ink-hover: #3e547d;
       --slate: #6F8591;      /* azul cinza */
@@ -69,7 +73,7 @@
       z-index: 2;
       margin: 26px 16px 130px;
       padding: 34px 26px 34px;
-      background: rgba(250,247,240,.93);
+      background: #faf7f0 var(--bg-panel) repeat;
       border: 1px solid var(--gold);
       border-radius: 14px;
       box-shadow: 0 10px 34px rgba(40,40,60,.18);
@@ -166,7 +170,7 @@
       display: flex;
       align-items: center;
       gap: 16px;
-      background: rgba(255,255,255,.55);
+      background: #fbf8f1 var(--bg-card) repeat;
       border: 1px solid rgba(201,164,94,.35);
       border-radius: 8px;
       padding: 13px 16px;
@@ -228,7 +232,7 @@
 
     /* ── Blocos de informação (valor, crianças, aviso) ── */
     .infobox {
-      background: rgba(255,255,255,.55);
+      background: #fbf8f1 var(--bg-card) repeat;
       border: 1px solid rgba(201,164,94,.35);
       border-radius: 8px;
       padding: 16px 18px;
@@ -286,7 +290,7 @@
       padding: 24px 22px;
       text-align: center;
       margin-bottom: 18px;
-      background: rgba(255,255,255,.4);
+      background: #fdfbf6 var(--bg-rsvp) repeat;
     }
     .rsvp .env {
       width: 54px; height: 54px;
