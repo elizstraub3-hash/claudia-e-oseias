@@ -38,37 +38,37 @@
       display: block;
     }
 
-    /* ── Botão "Clique aqui" ── */
-    .cta {
+    /* ── Selo clicável (sobre o selo já existente na capa) ── */
+    .cta-seal {
       position: absolute;
       left: 50%;
-      bottom: 6%;
-      transform: translateX(-50%);
-      width: 60%;
-      max-width: 270px;
+      top: 74.3%;
+      transform: translate(-50%, -50%);
+      width: 31%;
+      max-width: 158px;
       animation: pulse 1.7s ease-in-out infinite;
     }
 
-    .cta img {
+    .cta-seal img {
       width: 100%;
       display: block;
-      filter: drop-shadow(0 6px 16px rgba(90,60,0,.45));
+      filter: drop-shadow(0 5px 12px rgba(90,60,0,.4));
     }
 
     @keyframes pulse {
-      0%, 100% { transform: translateX(-50%) scale(1); }
-      50%      { transform: translateX(-50%) scale(1.06); }
+      0%, 100% { transform: translate(-50%, -50%) scale(1); }
+      50%      { transform: translate(-50%, -50%) scale(1.07); }
     }
 
-    .cover:active .cta { animation: none; transform: translateX(-50%) scale(.96); }
+    .cover:active .cta-seal { animation: none; transform: translate(-50%, -50%) scale(.95); }
   </style>
 </head>
 <body>
 
   <a class="cover" href="jantar.html" aria-label="Abrir convite do jantar">
     <img class="capa" src="capa.png" alt="Claudia & Oséias — Você recebeu um convite especial" loading="eager" decoding="async">
-    <span class="cta">
-      <img src="botao.png" alt="Clique aqui">
+    <span class="cta-seal">
+      <img src="selo.png" alt="Abrir convite">
     </span>
   </a>
 
