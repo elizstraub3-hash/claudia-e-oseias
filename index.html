@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Claudia &amp; Oséias – Convite</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Parisienne&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -42,10 +45,10 @@
     .cta-seal {
       position: absolute;
       left: 50%;
-      top: 74.3%;
+      top: 73.2%;
       transform: translate(-50%, -50%);
-      width: 31%;
-      max-width: 158px;
+      width: 33.5%;
+      max-width: 170px;
       animation: pulse 1.7s ease-in-out infinite;
     }
 
@@ -61,6 +64,28 @@
     }
 
     .cover:active .cta-seal { animation: none; transform: translate(-50%, -50%) scale(.95); }
+
+    /* ── Chamada abaixo do selo ── */
+    .cta-hint {
+      position: absolute;
+      left: 50%;
+      top: 87%;
+      transform: translateX(-50%);
+      width: 84%;
+      text-align: center;
+      font-family: 'Cinzel', Georgia, serif;
+      font-size: clamp(11px, 3.1vw, 15px);
+      font-weight: 600;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #2D3E5E;
+      text-shadow: 0 1px 4px rgba(253,250,244,.9), 0 0 2px rgba(253,250,244,.9);
+      animation: hintFade 1.7s ease-in-out infinite;
+    }
+    @keyframes hintFade {
+      0%, 100% { opacity: .75; }
+      50%      { opacity: 1; }
+    }
   </style>
 </head>
 <body>
@@ -70,6 +95,7 @@
     <span class="cta-seal">
       <img src="selo.png" alt="Abrir convite">
     </span>
+    <span class="cta-hint">Clique no selo e descubra</span>
   </a>
 
 </body>
